@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "theme": "chakra-cli tokens src/app/theme.ts",
+    "theme:watch": "chakra-cli tokens src/app/theme.ts --watch"
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.1.5",
@@ -25,5 +27,8 @@
     "react-dom": "18.2.0",
     "typescript": "5.2.2",
     "zustand": "^4.4.1"
+  },
+  "devDependencies": {
+    "@chakra-ui/cli": "^2.4.1"
   }
 }
