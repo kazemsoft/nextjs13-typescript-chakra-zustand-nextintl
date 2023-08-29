@@ -9,6 +9,7 @@ import { theme } from "./theme";
 const vazir = Vazirmatn({ subsets: ["arabic", "latin"] });
 
 export function Providers({ children }: { children: React.ReactNode }) {
+  const direction = "rtl"
   return (
     <>
       <style jsx global>
@@ -18,7 +19,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
           }
         `}
       </style>
-      <ChakraProvider>
+      <ChakraProvider theme={{ direction,...theme }}>
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />
         {children}
       </ChakraProvider>
